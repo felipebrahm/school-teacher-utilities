@@ -34,7 +34,11 @@ const randomizeArrayInPlace = (arr) => {
 };
 
 const getNamesFromTextArea = () => {
-  return ($('#form-group-generator-names').val() || '').trim().split('\n');
+  return ($('#form-group-generator-names').val() || '')
+    .trim()
+    .split('\n')
+    .map(name => { return name.trim(); })
+    .filter(name => { return name.length > 0; });
 };
 
 const getGroupsNumber = () => {
@@ -56,7 +60,7 @@ $(window).ready(() => {
     const namesByLine = getNamesFromTextArea();
 
     if (namesByLine.length === 0) {
-      return alert(`ERROR: To create ${numberOfGroups} groups you must enter at least ${numberOfGroups} names in different lines.`);
+      return alert(`ERROR: You must enter at least one student name.`);
     }
 
     randomizeArrayInPlace(namesByLine);
