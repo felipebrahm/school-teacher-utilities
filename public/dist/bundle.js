@@ -3799,9 +3799,9 @@ $(window).ready(function () {
 
     $('#random-generated-groups-results-wrapper').show();
 
-    $('html, body').animate({
+    $('html, body').stop().animate({
       scrollTop: $("#random-generated-groups-results-wrapper").offset().top
-    }, 500);
+    }, 250);
 
     // Check if we should save values to a cookie
     if ($('#form-group-generator-save-cookie').prop('checked')) {
