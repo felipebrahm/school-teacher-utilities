@@ -103,5 +103,3 @@ $(window).ready(() => {
     }
   });
 });
-
-//# sourceMappingURL=main.js.map
