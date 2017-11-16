@@ -7,7 +7,7 @@ const COOKIE_NAMES = 'group-generator-names';
 const readAndSetDefaultValuesFromCookie = () => {
   const groupsNumber = Cookies.get(COOKIE_GROUPS_NUMBER);
   if (groupsNumber && groupsNumber >= 1) {
-    $('#form-group-generator-groups-number').val(groupNumber);
+    $('#form-group-generator-groups-number').val(groupsNumber);
   }
 
   const names = Cookies.getJSON(COOKIE_NAMES);
