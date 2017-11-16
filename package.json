@@ -1,5 +1,5 @@
 {
-  "name": "random-group-generator",
+  "name": "school-teacher-utilities",
   "version": "1.0.0",
   "scripts": {
     "_build": "babel src/main.js --out-file js/main.js --source-maps",
@@ -23,5 +23,9 @@
   "engines": {
     "node": "8",
     "npm": "5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipebrahm/school-teacher-utilities.git"
   }
 }
