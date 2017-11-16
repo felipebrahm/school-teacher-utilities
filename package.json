@@ -2,10 +2,9 @@
   "name": "school-teacher-utilities",
   "version": "1.0.0",
   "scripts": {
-    "_build": "babel src/main.js --out-file js/main.js --source-maps",
     "build": "webpack",
     "watch": "webpack --progress --colors --watch",
-    "_watch": "babel src/main.js --watch --out-file js/main.js --source-maps"
+    "postinstall": "webpack"
   },
   "author": "Felipe Brahm <felipebrahm@gmail.com>",
   "license": "MIT",
