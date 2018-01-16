@@ -37,8 +37,15 @@ const getNamesFromTextArea = () => {
   return ($('#form-group-generator-names').val() || '')
     .trim()
     .split('\n')
-    .map(name => { return name.trim(); })
-    .filter(name => { return name.length > 0; });
+    .map(line => {
+      // Remove empty names or trailing ";"
+      return line.trim()
+        .split(';')
+        .map(name => { return name.trim(); })
+        .filter(name => { return name.length > 0; })
+        .join(';');
+    })
+    .filter(line => { return line.length > 0; });
 };
 
 const getGroupsNumber = () => {
